@@ -9,7 +9,10 @@ Original file is located at
 
 #กรอกตัวเลขจากน้อยไปหามาก
 def myfunction():
-  numbers = input("กรอกตัวเลข 5 ตัวและเว้นวรรค: ").split()
+  while True:  # ใช้วงวน while เพื่อให้กรอกตัวเลขได้ไม่เกิน 5 ครั้ง
+    numbers = input("กรอกตัวเลข 5 ตัวและเว้นวรรค: ").split()
+    if len(numbers) == 5:  # ตรวจสอบว่ากรอกตัวเลขไม่ถูกต้องหรือไม่
+      break
   numbers = [int(number) for number in numbers]
   if numbers[0] < numbers[1] and numbers[1] < numbers[2] and numbers[2] < numbers[3]  and numbers[3] < numbers[4]:
     min = 'จริง'
