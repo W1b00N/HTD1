@@ -20,7 +20,7 @@ class BankAccount(object):
         return self.balance
 
 if __name__ == '__main__':
-    myObj = BankAccount('Omkar', 1000)
+    myObj = BankAccount('ALPHA', 1000)
     myObj.deposit(1000)
     print(myObj.getBalance())
     myObj.withdraw(500)
